@@ -1,0 +1,40 @@
+#! /usr/bin/env bash
+
+# Generate .zshrc file if not exits
+touch ${ZDOTDIR-~}/.zshrc
+
+{% if use_direnv == 'yes' %}
+# Install Direnv
+if ! command -v direnv &>/dev/null; then
+    echo "Install Direnv..."
+    brew install direnv
+
+    # Add hook to .zshrc
+    printf "\n# Run direnv hook\n" >>${ZDOTDIR-~}/.zshrc
+    echo "eval \"\$(direnv hook zsh )\"" >>${ZDOTDIR-~}/.zshrc
+    source ${ZDOTDIR-~}/.zshrc
+fi
+{% endif %}
+
+# Install Pyenv
+if ! command -v pyenv &>/dev/null; then
+    echo "Install Pyenv..."
+    brew install pyenv
+
+    # Add hook to .zshrc
+    printf "\n# Run pyenv hook\n" >>${ZDOTDIR-~}/.zshrc
+    echo 'eval "$(pyenv init --path)"' >>${ZDOTDIR-~}/.zshrc
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >>${ZDOTDIR-~}/.zshrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >>${ZDOTDIR-~}/.zshrc
+    echo 'export PATH="$PYENV_ROOT/shims:$PATH"' >>${ZDOTDIR-~}/.zshrc
+
+    source ${ZDOTDIR-~}/.zshrc
+fi
+
+# Install Poetry
+if ! command -v poetry &>/dev/null; then
+    echo "Install Poetry..."
+    brew install poetry
+fi
+
+pyenv install -s {{ python_version }}

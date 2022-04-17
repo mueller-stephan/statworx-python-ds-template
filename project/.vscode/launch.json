@@ -1,0 +1,53 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Remote Attach",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5679
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Kedro Run",
+            "type": "python",
+            "request": "launch",
+            "console": "internalConsole",
+            "args": [
+                "run",
+                "--debug" // argument needed for custom hook
+            ]
+            // Any other arguments should be passed as a comma-seperated-list
+            // e.g "args": ["run", "--pipeline", "pipeline_name"]
+        },
+        {
+            "name": "Step: Custom",
+            "type": "python",
+            "request": "launch",
+            "console": "internalConsole",
+            "module": "kedro",
+            "args": [
+                "run",
+                "--debug", // argument needed for custom hook
+                // "--from-nodes",
+                // "featurization_pipeline.make_tabular_dataset",
+                "--from-inputs",
+                "spiky_actuals",
+            ]
+            // Any other arguments should be passed as a comma-seperated-list
+            // e.g "args": ["run", "--pipeline", "pipeline_name"]
+        }
+    ]
+}

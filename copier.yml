@@ -1,0 +1,43 @@
+--- # CONFIGURATION -------------------------
+_subdirectory: project
+_templates_suffix: .j2
+_tasks:
+  - python scripts/validate_inputs.sh
+  - sh scripts/post_generation.sh
+
+# PROMPT --------------------------------
+project_name:
+  type: str
+  help: Your project name
+
+project_description:
+  type: str
+  help: Your project description
+
+package_name:
+  type: str
+  help: Your Python package import name (for `import NAME` in Python code)
+  default: "{{ project_name|lower|replace('-', '_')|replace(' ', '_') }}"
+
+author_fullname:
+  type: str
+  help: Your full name
+
+author_email:
+  type: str
+  help: Your email
+  default: "{{ author_fullname|lower|replace(' ', '.') }}@statworx.com"
+
+git_repository:
+  type: str
+  help: Your git repository url (e.g https://github.com/username/project)
+
+python_version:
+  type: str
+  help: Your python version for the project (only 3.8.x is allow because of kedro)
+  default: "3.8.9"
+
+use_direnv:
+  type: bool
+  help: Do you want to use direnv? (It will be installed automatically)
+  default: yes

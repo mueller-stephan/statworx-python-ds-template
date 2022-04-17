@@ -1,0 +1,10 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/kedro-org/kedro/develop/static/jsonschema/kedro-catalog-0.17.json": "conf/**/*catalog*"
+    },
+    "git.ignoreLimitWarning": true,
+    "todo-tree.filtering.excludeGlobs": [
+        "docs",
+        ".venv",
+    ]
+}

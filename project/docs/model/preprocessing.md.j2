@@ -1,0 +1,39 @@
+# Preprocessing
+
+
+Typically, real-world data is often incomplete, inconsistent, inaccurate (with errors or outliers), and often does not contain specific attribute values/trends. This is where data preprocessing comes into play. It cleans, formats and organizes the raw data so that it is ready for use in machine learning models.
+Data pre-processing is an essential step in machine learning because the quality of the data and the useful information that can be derived from it directly impacts the ability of our model to learn. Therefore, it is extremely important that we preprocess our data before feeding it into our model.
+When you use datasets to train machine learning models, you often hear the phrase "garbage in, garbage out." This means that if you use bad or "dirty" data to train your model, you will end up with a poor, improperly trained model that won't really be relevant to your analysis.
+Good, pre-processed data is even more important than the most powerful algorithms. This goes so far that machine learning models trained with bad data can actually harm the analysis you're trying to perform - they deliver "garbage" results.
+
+## Min Max Scaling
+
+One problem with the dataset is that the different time series have different sizes, ranging from a few thousand to tens of millions.
+The goal of the machine learning model is to learn a uniform model for all time series.
+But with different scales, it is difficult for the machine learning model to generalize over a set of time series.
+We scale the time series to a range of 0 to 1 so that the model can focus on learning the patterns in the time series rather than the scales.
+The model predictions are scaled back to the original scale so that they are comparable to the test data.
+Scaling is learned only for the training data set to avoid data loss.
+
+Let $X = \{x_1, x_2, \ldots, x_N\}$ be the observed values of a given time series. The minimum and maximum scaled values of this one time series are defined for $i \in 1, \ldots, N$ as follows
+$$
+\hat{x}_i = \frac{x_i - \min{X}}{\max{X} - \min{X}}
+$$
+
+## Invert Outflow values
+
+For every inflow time series from Company A to Company B, there should be a corresponding outflow time series from Company B to Company A, whose values are inverted by multiplying by minus one.
+And in general, outflow time series have only negative values, while inflow time series have only positive values.
+
+We would like to reduce the variance that the model must learn by exploiting the logic of inflows and outflows.
+To this end, we invert the outflow time series by multiplying them by minus one.
+All time series are now positive and the model can focus on learning the data patterns rather than the sign.
+
+## Impute Zeros if value is missing
+
+For some time series, there are some months for which no value was recorded. This is the case when there were no inflows or outflows to record. These "missing" values are set to zero to obtain complete time series.
+
+## Trim Leading Zeros from Timeseries
+
+There are many time series that did not start recording values until well after 2015. Since we impute all "missing" values with zeros, the first years in which no values were recorded are imputed with zeros, resulting in long stripes with only zero values at the beginning of some time series.
+We fix this by removing all leading zeros from a time series.

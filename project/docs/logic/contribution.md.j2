@@ -1,0 +1,69 @@
+# Contribution
+
+## Pre-Commit
+
+Pre commit hooks are used to lint the code and to strip output from commited Jupyter Notebooks automatically before every code commit. This assures that only clean code is pushed into the repository. The tool can be installed by running
+
+```console
+brew install pre-commit
+```
+
+To integrate `pre-commit` into your git hooks use `pre-commit install`. To check once against all files `pre-commit run --all-files`. The hooks can be edited in the file `.pre-commit-config.yaml`. You can find more details [here](https://pre-commit.com).
+
+## Commititzen
+
+Commitizen is a tool designed for teams. Its main purpose is to define a standard way of committing rules and communicating it. The tool can be installed by running:
+```
+brew install commitizen
+```
+
+### Message Convention
+The commit convention that is used in this project is specifically designed for data science projects which was adapted from [freecodecamp](https://www.freecodecamp.org/news/level-you-up-to-awesome-commit-messages-a85558cb90e8). The convention is:
+Every Commit Message consits of two parts. The first part indicates to which part of a project the commit belongs to e.g.
+Modeling or Shiny App. The second part gives a short description of the changes made.
+The following abbreviations are used:
+
+```
+commit -m  "(<Tag 1>:<Tag 2>) <MESSAGE>"
+commit -m "(MOD:ENH) Added linear regression to toolstack"
+```
+
+**Tag 1:** Where to commit?
+
+- **PPL**   - Pipeline
+- **MOD**   - Model related
+- **SEL**   - Feature selection
+- **EXP**   - Exploration
+- **DAT**   - Data related
+- **ORG**   - Organisation
+- **DEP**   - Deployment related
+
+**Tag 2:** What to commit?
+
+- **ICM** - Initial Commit of New Script/Class/Function
+- **DEL** - Delete Script/Function/Class
+- **BFX** - Bugfix
+- **ENH** - Enhancement
+- **REF** - Reformat/Pretty Code
+
+
+### Usage
+You don't have to manually follow the commit convention. Instead the commit messages can be interactively constructed using the `commitizen` tool by running:
+
+```
+cz commit
+```
+
+## Documentation
+
+The code is documented via [mkdocs](https://www.mkdocs.org/) with the extension [mkdosctrings](https://mkdocstrings.github.io/). To generate the documentation the command `mkdocs build` must be used. To open the documentation in the browser the command `mkdocs serve` can be used. To implement new parts of documentation in the report adapt nav section in the `mkdocs.yml` file. A detailed description of the description can be found in the usage description of the mkdocstrings package. To build the documentation a convinience method was registerd with `make`. This can be run with:
+
+```console
+make documentation
+```
+
+## Github Actions
+TODO: A describtion of the actions that are included in this project.
+
+## Debugging
+TODO: A guide on debugging/launcing kedro pipelines. Also devtooling should be described.

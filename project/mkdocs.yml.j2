@@ -1,0 +1,109 @@
+site_name: "{{ project_name.title() }}"
+site_description: "{{ project_description }}"
+copyright: Made by STATWORX
+use_directory_urls: false
+{%- if git_repository != "" %}
+repo_url: "{{ git_repository }}"
+# repo_name: [Optional Repo Name]
+{% endif %}
+
+theme:
+  name: material
+  # favicon: assets/favicon.png
+  # logo: assets/logo.png
+  palette:
+    - schema: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - search.highlight
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - content.code.annotate
+    - toc.integrate
+    - navigation.top
+
+extra_css:
+  - assets/css/style.css
+  - assets/css/material.css
+  - assets/css/mkdocstrings.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/statworx
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@statworx_blog
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/statworx
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/statworx
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/statworx
+    - icon: fontawesome/brands/xing
+      link: https://www.xing.com/companies/statworx
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/statworx
+
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          selection:
+            docstring_style: google
+            docstring_options:
+              ignore_init_summary: yes
+          rendering:
+            merge_init_into_class: false
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: false
+            show_if_no_docstring: true
+      watch:
+        - src
+nav:
+  - Home:
+      - Overview: index.md
+      - Changelog: changelog.md
+  - Technical Overview:
+      - Project Setup: logic/project_setup.md
+      - Contribution: logic/contribution.md
+      - Developement Guide: logic/developement_guide.md
+      - Operation: logic/operation.md
+      - Deployment: logic/deplyment.md
+  - Modeling Overview:
+      - Overview: model/overview.md
+      - Preprocessing: model/preprocessing.md
+      - Features: model/features.md
+      - Pooling Model: model/model.md
+      - Evaluation: model/evaluation.md
+  - Code Reference: code/documentation.md
