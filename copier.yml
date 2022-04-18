@@ -2,7 +2,7 @@
 _subdirectory: project
 _templates_suffix: .j2
 _tasks:
-  - python scripts/validate_inputs.sh
+  - python scripts/validate_inputs.py
   - sh scripts/post_generation.sh
 
 # PROMPT --------------------------------
