@@ -1,3 +1,18 @@
+## 0.4.0 (2022-04-18)
+
+
+- Merge branch 'dev'
+- [PPL:TEST] Test kedro commands
+- [PPL:FIX] Update logging.yaml for kedro 0.18.0
+- [ORG:ENH] Update directions on README
+- [ORG:FIX] Update mkdocs config
+- [EXP:FEAT] Update install script
+- [CI:FIX] Only test on MacOS
+- [ORG:FIX] Update gititnore
+- [ORG:DOCS] Update README
+- [CI:FIX] Fix false make target for tests
+- [CI:FIX] Fix superflous test runs for github actions
+
 ## 0.3.0 (2022-04-18)
 
 
