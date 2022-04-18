@@ -1,7 +1,6 @@
 [tool.commitizen]
 name = "cz_customize"
 version = "0.1.0"
-version_files = ["pyproject.toml:version"]
 
 [tool.commitizen.customize]
 message_template = "[{{tag1}}:{{tag2}}] {{message}}"
