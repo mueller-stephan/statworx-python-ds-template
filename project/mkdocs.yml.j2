@@ -2,7 +2,7 @@ site_name: "{{ project_name.title() }}"
 site_description: "{{ project_description }}"
 copyright: Made by STATWORX
 use_directory_urls: false
-{%- if git_repository != "" %}
+{%- if git_repository %}
 repo_url: "{{ git_repository }}"
 # repo_name: [Optional Repo Name]
 {% endif %}

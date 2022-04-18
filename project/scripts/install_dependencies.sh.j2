@@ -37,4 +37,5 @@ if ! command -v poetry &>/dev/null; then
     brew install poetry
 fi
 
+# Install version '{{ python_version }}' of python using pyenv
 pyenv install -s {{ python_version }}
