@@ -1,0 +1,76 @@
+site_name: "Statworx Project Template"
+site_description: "Official statworx template for data science project using in kedro."
+copyright: Made by statworx
+use_directory_urls: false
+repo_url: https://dev.azure.com/Stada-DataHub/BI_Team/_git/stde-liquidity-forecast
+repo_name: BI_Team/stde-liquidity-forecast
+
+theme:
+  name: material
+  favicon: assets/favicon.jpg
+  logo: assets/logo.svg
+  palette:
+    schema: default
+    primary: black
+    accent: blue
+
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - search.highlight
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - content.code.annotate
+    - toc.integrate
+    - navigation.top
+
+extra_css:
+  - assets/css/extras.css
+  - assets/css/style.css
+  - assets/css/material.css
+  - assets/css/mkdocstrings.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/statworx
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@statworx_blog
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/statworx
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/statworx
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/statworx
+    - icon: fontawesome/brands/xing
+      link: https://www.xing.com/companies/statworx
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/statworx
+
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+
+nav:
+  - Overview: index.md
+  - Changelog: changelog.md
+  - Licence: licence.md

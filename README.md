@@ -37,3 +37,56 @@ copier "gh:pawamoy/copier-poetry" /path/to/your/new/project
 
 See the [documentation](https://pawamoy.github.io/copier-poetry)
 for more details.
+
+## Directory Structure
+
+```
+├── .cz.toml
+│
+├── .envrc
+│
+├── .github
+├── .gitignore
+│
+├── .pre-commit-config.yaml
+│
+├── .python-version
+│
+├── CHANGELOG.md
+│
+├── Dockerfile
+│
+├── Makefile
+│
+├── README.md
+│
+├── mkdocs.yml
+│
+├── pyproject.toml
+│
+├── setup.cfg
+│
+├── conf
+│
+├── data
+│   ├── 01_raw
+│   ├── 02_intermediate
+│   ├── 03_primary
+│   ├── 04_feature
+│   ├── 05_model_input
+│   ├── 06_models
+│   ├── 07_model_output
+│   └── 08_reporting
+│
+├── docs
+│
+├── logs
+│
+├── notebooks
+│
+├── scripts
+│
+└── src
+    ├── {{ project_name }}
+    └── tests
+```
