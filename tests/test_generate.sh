@@ -5,19 +5,21 @@ export TESTING=true
 output=tests/tmp
 
 echo "///////////////////////////////////////////"
-echo "             SET UP TESTS"
+echo "             TAGGING TEMPLATE COPY"
 echo "///////////////////////////////////////////"
 echo
 template=$(mktemp -d)
 cp -rf . "${template}"
 (
   cd "${template}" || exit 1
+  git add . -A || true
+  git commit -m "test" || true
+  git tag 99.99.99
 )
 echo "Template copy located at ${template}"
-
 echo
 echo "///////////////////////////////////////////"
-echo "             GENERATING PROJECT"
+echo "             GENERATING TEMPLATE PROJECT"
 echo "///////////////////////////////////////////"
 echo
 copier -f "${template}" "${output}" \
