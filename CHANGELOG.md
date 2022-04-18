@@ -1,3 +1,10 @@
+## 0.3.0 (2022-04-18)
+
+
+- Merge branch 'dev' into origin/master
+- [ORG:FEAT] Update documentation
+- [OPS:FIX] Update readthedocs config
+
 ## 0.2.0 (2022-04-18)
 
 
