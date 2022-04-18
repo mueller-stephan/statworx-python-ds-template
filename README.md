@@ -27,22 +27,17 @@ Documentation for this template can be found at [readthedocs](https://statworx-p
 
 ## Quick setup and usage
 
-Make sure all the
-[requirements](https://pawamoy.github.io/copier-poetry/requirements)
-are met, then:
+First make sure that [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
 
 ```bash
-copier "https://github.com/pawamoy/copier-poetry.git" /path/to/your/new/project
+copier "https://github.com/AnHo4ng/cookiecutter-data-science.git" /path/to/your/new/project
 ```
 
 Or even shorter:
 
 ```bash
-copier "gh:pawamoy/copier-poetry" /path/to/your/new/project
+copier "gh:AnHo4ng/cookiecutter-data-science" /path/to/your/new/project
 ```
-
-See the [documentation](https://pawamoy.github.io/copier-poetry)
-for more details.
 
 ## Directory Structure
 
