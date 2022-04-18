@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  {{ package_name }}:
+    image: 'statworx/{{ package_name }}:latest'
+    build:
+      context: .
+    tty: true
