@@ -1,9 +1,9 @@
 site_name: "Statworx Project Template"
 site_description: "Official statworx template for data science project using in kedro."
-copyright: Made by statworx
+copyright: Made with ❤ from Statworx
 use_directory_urls: false
-repo_url: https://dev.azure.com/Stada-DataHub/BI_Team/_git/stde-liquidity-forecast
-repo_name: BI_Team/stde-liquidity-forecast
+repo_url: https://github.com/AnHo4ng/statworx-python-ds-template
+repo_name: AnHo4ng/statworx-python-ds-template
 
 theme:
   name: material
