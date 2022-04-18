@@ -6,9 +6,9 @@
 [![Python version](https://img.shields.io/badge/python-3.8-blue.svg)](https://pypi.org/project/kedro/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/blob/master/LICENCE)
 
-[Copier](https://github.com/copier-org/copier) template
-For Data Science projects using [Kedro](https://kedro.readthedocs.io/en/stable/) with [Poetry](https://github.com/python-poetry/poetry) as the dependency manager.
-This template is locked to the `0.18.x` version of Kedro, as its API changes rapidly and newer versions might break the application.
+[Copier](https://github.com/copier-org/copier) template for Data Science projects using [Kedro](https://kedro.readthedocs.io/en/stable/) with [Poetry](https://github.com/python-poetry/poetry) as dependency manager.
+This template is tied to version `0.18.x` of Kedro, as the API changes rapidly and newer versions could break the application.
+Documentation for this template can be found at [readthedocs](https://statworx-python-ds-template.readthedocs.io/en/latest/).
 
 ## Features
 
