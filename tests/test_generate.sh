@@ -29,6 +29,7 @@ copier -f "${template}" "${output}" \
   -d author_fullname="An Hoang" \
   -d author_email="an.hoang@statworx.com" \
   -d python_version="3.8.9" \
+  -d use_jupyterlab="yes" \
   -d use_direnv="yes"
 cd "${output}"
 

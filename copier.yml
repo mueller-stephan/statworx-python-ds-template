@@ -47,3 +47,9 @@ use_jupyterlab:
   help: Do you want to install jupter lab ?
   default: yes
 
+orchestrator:
+  choices:
+    Kedro (default): kedro
+    Hydra: hydra
+    None: none
+  default: "kedro"
