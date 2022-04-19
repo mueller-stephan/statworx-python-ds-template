@@ -1,3 +1,13 @@
+## 0.5.0 (2022-04-19)
+
+
+- Merge branch 'dev'
+- [DPLY:FEAT] Add docker compose file
+- [ORG:DOCS] Update css to match statworx CD
+- [ORG:DOCS] Update docs
+- [ORG:FEAT] Install python with tkinter support
+- [OPS:FEAT] Add configuration for VSCode
+
 ## 0.4.0 (2022-04-18)
 
 
