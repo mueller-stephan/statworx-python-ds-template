@@ -1,3 +1,10 @@
+## 0.8.0 (2022-04-19)
+
+
+- Merge branch 'dev'
+- [ORG:FEAT] Add option to select between sphinx and mkdocs
+- [DPLY:FEAT] Install brew as part of the dependecy installation
+
 ## 0.7.0 (2022-04-19)
 
 
