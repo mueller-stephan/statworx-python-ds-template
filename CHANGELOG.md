@@ -1,3 +1,16 @@
+## 0.6.0 (2022-04-19)
+
+
+- Merge branch 'dev'
+- [ORG:FEAT] Update kedro src folder
+- [ORG:FEAT] Add a choice for orchestration tools
+- [MOD:FEAT] Add orchestrator option
+- [ORG:FIX] Fix pyenv gcc bug
+- [OPS:FEAT] Add jupyter lab
+- [ORG:DOCS] Update README badge
+- [ORG:STYLE] Update css for mkdocs
+- [ORG:REF] Update footer colors
+
 ## 0.5.0 (2022-04-19)
 
 
