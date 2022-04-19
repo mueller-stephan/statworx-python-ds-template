@@ -11,6 +11,7 @@ PYTHON_INTERPRETER = $(VENV)/python
 # COMMANDS                                                                      #
 #################################################################################
 
+{%- if orchestrator == 'kedro' %}
 .PHONY: run_local
 run_local:
 	$(PYTHON_INTERPRETER) -m kedro run --env local
@@ -19,6 +20,21 @@ run_local:
 run_prod:
 	$(PYTHON_INTERPRETER) -m kedro run --env prod
 
+.PHONY: mlflow
+mlflow:
+	$(PYTHON_INTERPRETER) -m kedro mlflow ui
+
+.PHONY: viz
+viz:
+	$(PYTHON_INTERPRETER) -m kedro viz
+
+{% endif %}
+{%- if orchestrator == 'hydra' %}
+.PHONY: run_prod
+run_prod:
+	$(PYTHON_INTERPRETER) -m kedro run --env prod
+
+{% endif %}
 .PHONY: clean
 clean:
 	find . -type f -name "*.py[co]" -delete
@@ -48,20 +64,13 @@ documentation:
 build_documentation:
 	$(PYTHON_INTERPRETER) -m mkdocs build
 
-.PHONY: mlflow
-mlflow:
-	$(PYTHON_INTERPRETER) -m kedro mlflow ui
-
-.PHONY: viz
-viz:
-	$(PYTHON_INTERPRETER) -m kedro viz
 
 #################################################################################
 # SETUP
 #################################################################################
 
 .PHONY: install
-install: install_tools install_dependencies install_precommit
+install: install_tools install_dependencies install_precommit {% if use_jupyterlab %}install_kernel{% endif %}
 	{% if use_direnv == true %}direnv allow{% endif %}
 
 .PHONY: install_dependencies
@@ -78,3 +87,8 @@ install_precommit:
 .PHONY: install_tools
 install_tools:
 	@sh ./scripts/install_dependencies.sh
+
+{% if use_jupyterlab %}.PHONY: install_kernel
+install_kernel:
+	$(VENV)/python -m ipykernel install --user --name $(PROJECT_NAME)
+{% endif %}

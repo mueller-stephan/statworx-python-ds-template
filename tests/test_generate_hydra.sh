@@ -2,7 +2,7 @@
 set -eu
 export TESTING=true
 
-output=tests/tmp
+output=tests/tmp/hydra
 venv=.venv/bin
 
 echo "///////////////////////////////////////////"
@@ -29,7 +29,9 @@ copier -f "${template}" "${output}" \
   -d author_fullname="An Hoang" \
   -d author_email="an.hoang@statworx.com" \
   -d python_version="3.8.9" \
-  -d use_direnv="yes"
+  -d use_jupyterlab="yes" \
+  -d use_direnv="yes" \
+  -d orchestrator="hydra"
 cd "${output}"
 
 echo
@@ -46,28 +48,16 @@ echo
 echo ">>> Build Documentation"
 make --no-print-directory build_documentation
 echo
-echo ">>> Test Kedro"
+echo ">>> Test Hydra"
 
 # test creating pipeline
-${venv}/kedro pipeline create test_pipeline
-
-# test unit tests
-${venv}/kedro test
-
-# test run
-cat >src/statworx_template_testing/pipeline_registry.py <<EOF
-from typing import Dict
-from kedro.pipeline import Pipeline, pipeline, node
-def register_pipelines() -> Dict[str, Pipeline]:
-    return {"__default__": pipeline([node(lambda : 1, inputs=None, outputs="out")])}
-EOF
-${venv}/kedro run
+${venv}/statworx_template_testing
 
 echo
-# echo
-# echo "///////////////////////////////////////////"
-# echo "             CLEANUP"
-# echo "///////////////////////////////////////////"
-# echo
-# echo ">>> Removing ${template}"
-# rm -rf "${template}"
+echo
+echo "///////////////////////////////////////////"
+echo "             CLEANUP"
+echo "///////////////////////////////////////////"
+echo
+echo ">>> Removing ${template}"
+rm -rf "${template}"

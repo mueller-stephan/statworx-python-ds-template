@@ -7,9 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "~{{ python_version }}"
+{%- if orchestrator == 'kedro' %}
 kedro = "0.18.0"
 kedro-mlflow = ">=0.9.0"
-kedro-viz = ">=4.3.0"
+kedro-viz = ">=4.3.0"{% endif %}
+{%- if orchestrator == 'hydra' %}
+hydra-core = ">=1.1.2"{% endif %}
+{%- if orchestrator == 'none' %}
+click = ">=8.1.2"{% endif %}
 debugpy = ">=1.5.1"
 
 [tool.poetry.dev-dependencies]
@@ -25,6 +30,8 @@ mkdocstrings = ">=0.18.1"
 mkdocstrings-python = ">=0.6.6"
 pytest = ">=7.1.0"
 pre-commit = ">=2.18.0"
+{% if use_jupyterlab %}jupyterlab = ">=3.3.4"{% endif %}
+{%- if orchestrator == 'kedro' %}
 
 [tool.poetry.scripts]
 '{{ package_name }}' = '{{ package_name }}.__main__:main'
@@ -33,7 +40,17 @@ pre-commit = ">=2.18.0"
 package_name = "{{ package_name }}"
 project_name = "{{ package_name }}"
 project_version = "0.18.0"
+{% endif %}
+{%- if orchestrator == 'hydra' %}
 
+[tool.poetry.scripts]
+'{{ package_name }}' = '{{ package_name }}.main:main'
+{% endif %}
+{%- if orchestrator == 'click' %}
+
+[tool.poetry.scripts]
+'{{ package_name }}' = '{{ package_name }}.main:main'
+{% endif %}
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

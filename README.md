@@ -1,7 +1,7 @@
 # Statworx Python Template
 
-[![Release](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/release.yml/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/release.yml)
-[![Test](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/test.yml/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/test.yml)
+[![Release](https://github.com/AnHo4ng/statworx-python-ds-template/workflows/Release%20Pipeline/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/release.yml)
+[![Test](https://github.com/AnHo4ng/statworx-python-ds-template/workflows/Test/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/test.yml)
 [![Documentation Status](https://readthedocs.org/projects/statworx-python-ds-template/badge/?version=latest)](https://statworx-python-ds-template.readthedocs.io/en/latest/?badge=latest)
 [![Python version](https://img.shields.io/badge/python-3.8-blue.svg)](https://pypi.org/project/kedro/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/blob/master/LICENCE)

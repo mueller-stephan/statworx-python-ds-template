@@ -6,6 +6,14 @@ _tasks:
   - sh scripts/post_generation.sh
 
 # PROMPT --------------------------------
+orchestrator:
+  type: str
+  help: Why project orchestrator do you want to use?
+  choices:
+    Kedro: "kedro"
+    Hydra: "hydra"
+    None: "none"
+
 project_name:
   type: str
   help: Your project name
@@ -40,4 +48,9 @@ python_version:
 use_direnv:
   type: bool
   help: Do you want to use direnv? (It will be installed automatically)
+  default: yes
+
+use_jupyterlab:
+  type: bool
+  help: Do you want to install jupter lab?
   default: yes
