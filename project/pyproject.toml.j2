@@ -30,7 +30,7 @@ mkdocstrings = ">=0.18.1"
 mkdocstrings-python = ">=0.6.6"
 pytest = ">=7.1.0"
 pre-commit = ">=2.18.0"
-{% if use_jupyterlab %} jupyterlab = ">=3.3.4" {% endif %}
+{% if use_jupyterlab %}jupyterlab = ">=3.3.4"{% endif %}
 {%- if orchestrator == 'kedro' %}
 
 [tool.poetry.scripts]

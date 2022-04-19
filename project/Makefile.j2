@@ -11,6 +11,7 @@ PYTHON_INTERPRETER = $(VENV)/python
 # COMMANDS                                                                      #
 #################################################################################
 
+{%- if orchestrator == 'kedro' %}
 .PHONY: run_local
 run_local:
 	$(PYTHON_INTERPRETER) -m kedro run --env local
@@ -19,6 +20,21 @@ run_local:
 run_prod:
 	$(PYTHON_INTERPRETER) -m kedro run --env prod
 
+.PHONY: mlflow
+mlflow:
+	$(PYTHON_INTERPRETER) -m kedro mlflow ui
+
+.PHONY: viz
+viz:
+	$(PYTHON_INTERPRETER) -m kedro viz
+
+{% endif %}
+{%- if orchestrator == 'hydra' %}
+.PHONY: run_prod
+run_prod:
+	$(PYTHON_INTERPRETER) -m kedro run --env prod
+
+{% endif %}
 .PHONY: clean
 clean:
 	find . -type f -name "*.py[co]" -delete
@@ -48,13 +64,6 @@ documentation:
 build_documentation:
 	$(PYTHON_INTERPRETER) -m mkdocs build
 
-.PHONY: mlflow
-mlflow:
-	$(PYTHON_INTERPRETER) -m kedro mlflow ui
-
-.PHONY: viz
-viz:
-	$(PYTHON_INTERPRETER) -m kedro viz
 
 #################################################################################
 # SETUP
