@@ -25,6 +25,7 @@ mkdocstrings = ">=0.18.1"
 mkdocstrings-python = ">=0.6.6"
 pytest = ">=7.1.0"
 pre-commit = ">=2.18.0"
+{% if use_jupyterlab %} jupyterlab = ">=3.3.4" {% endif %}
 
 [tool.poetry.scripts]
 '{{ package_name }}' = '{{ package_name }}.__main__:main'

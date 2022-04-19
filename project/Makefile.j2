@@ -61,7 +61,7 @@ viz:
 #################################################################################
 
 .PHONY: install
-install: install_tools install_dependencies install_precommit
+install: install_tools install_dependencies install_precommit {% if use_jupyterlab %}install_kernel{% endif %}
 	{% if use_direnv == true %}direnv allow{% endif %}
 
 .PHONY: install_dependencies
@@ -78,3 +78,8 @@ install_precommit:
 .PHONY: install_tools
 install_tools:
 	@sh ./scripts/install_dependencies.sh
+
+{% if use_jupyterlab %}.PHONY: install_kernel
+install_kernel:
+	$(VENV)/python -m ipykernel install --user --name $(PROJECT_NAME)
+{% endif %}

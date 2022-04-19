@@ -41,3 +41,9 @@ use_direnv:
   type: bool
   help: Do you want to use direnv? (It will be installed automatically)
   default: yes
+
+use_jupyterlab:
+  type: bool
+  help: Do you want to install jupter lab ?
+  default: yes
+
