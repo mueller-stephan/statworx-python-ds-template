@@ -12,6 +12,7 @@ PYTHON_INTERPRETER = $(VENV)/python
 #################################################################################
 
 {%- if orchestrator == 'kedro' %}
+
 .PHONY: run_local
 run_local:
 	$(PYTHON_INTERPRETER) -m kedro run --env local
@@ -28,13 +29,14 @@ mlflow:
 viz:
 	$(PYTHON_INTERPRETER) -m kedro viz
 
-{% endif %}
+{%- endif %}
 {%- if orchestrator == 'hydra' %}
+
 .PHONY: run_prod
 run_prod:
 	$(PYTHON_INTERPRETER) -m kedro run --env prod
 
-{% endif %}
+{%- endif %}
 .PHONY: clean
 clean:
 	find . -type f -name "*.py[co]" -delete
@@ -55,6 +57,7 @@ test:
 .PHONY: check-code-quality
 check-code-quality:
 	$(VENV)/pre-commit run --all-files
+{%- if documentation == 'mkdocs' %}
 
 .PHONY: documentation
 documentation:
@@ -64,7 +67,22 @@ documentation:
 build_documentation:
 	$(PYTHON_INTERPRETER) -m mkdocs build
 
+{%- endif %}
+{%- if documentation == 'sphinx' %}
 
+.PHONY: build_html_docs
+build_html_docs: generate_api_documentation
+	$(VENV)/sphinx-build -M html ./docs ./docs/build
+
+.PHONY: build_pdf_docs
+build_pdf_docs: generate_api_documentation
+	$(VENV)/sphinx-build -M latexpdf ./docs ./docs/build
+
+.PHONY: generate_api_documentation
+generate_api_documentation:
+	$(VENV)/sphinx-apidoc -o docs/source/code ./src/$(PROJECT_NAME)
+
+{%- endif %}
 #################################################################################
 # SETUP
 #################################################################################
@@ -81,14 +99,15 @@ install_dependencies: install_tools
 
 .PHONY: install_precommit
 install_precommit:
-	git init
+	git init -q
 	$(VENV)/pre-commit install
 
 .PHONY: install_tools
 install_tools:
 	@sh ./scripts/install_dependencies.sh
+{%- if use_jupyterlab %}
 
-{% if use_jupyterlab %}.PHONY: install_kernel
+.PHONY: install_kernel
 install_kernel:
 	$(VENV)/python -m ipykernel install --user --name $(PROJECT_NAME)
-{% endif %}
+{%- endif %}

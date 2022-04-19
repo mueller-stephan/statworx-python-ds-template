@@ -6,14 +6,6 @@ _tasks:
   - sh scripts/post_generation.sh
 
 # PROMPT --------------------------------
-orchestrator:
-  type: str
-  help: Why project orchestrator do you want to use?
-  choices:
-    Kedro: "kedro"
-    Hydra: "hydra"
-    None: "none"
-
 project_name:
   type: str
   help: Your project name
@@ -21,6 +13,11 @@ project_name:
 project_description:
   type: str
   help: Your project description
+
+client_name:
+  type: str
+  help: Your project name
+  default: "Statworx"
 
 package_name:
   type: str
@@ -39,6 +36,7 @@ author_email:
 git_repository:
   type: str
   help: Your git repository url (e.g https://github.com/username/project)
+  default: ""
 
 python_version:
   type: str
@@ -54,3 +52,20 @@ use_jupyterlab:
   type: bool
   help: Do you want to install jupter lab?
   default: yes
+
+orchestrator:
+  type: str
+  help: Why project orchestrator do you want to use?
+  choices:
+    Kedro: "kedro"
+    Hydra: "hydra"
+    None: "none"
+  default: kedro
+
+documentation:
+  type: str
+  help: Why documentation system do you want to use?
+  choices:
+    Mkdocs: "mkdocs"
+    Sphinx: "sphinx"
+  default: mkdocs

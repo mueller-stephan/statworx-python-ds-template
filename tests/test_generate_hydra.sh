@@ -31,7 +31,9 @@ copier -f "${template}" "${output}" \
   -d python_version="3.8.9" \
   -d use_jupyterlab="yes" \
   -d use_direnv="yes" \
-  -d orchestrator="hydra"
+  -d orchestrator="hydra" \
+  -d client_name="Statworx" \
+  -d documentation="sphinx"
 cd "${output}"
 
 echo
@@ -45,8 +47,8 @@ echo
 echo ">>> Running code tests"
 make --no-print-directory test
 echo
-echo ">>> Build Documentation"
-make --no-print-directory build_documentation
+echo ">>> Build HTML Documentation"
+make --no-print-directory build_html_docs
 echo
 echo ">>> Test Hydra"
 
