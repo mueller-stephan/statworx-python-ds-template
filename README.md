@@ -21,13 +21,22 @@ Documentation for this template can be found at [readthedocs](https://statworx-p
     - [flake8](https://gitlab.com/pycqa/flake8) and plugins,
     - [isort](https://github.com/timothycrosley/isort),
     - [mypy](https://github.com/python/mypy),
-    - [safety](https://github.com/pyupio/safety)
-- Python 3.8.x
+- Python `3.8.x`
 - Makefile for convenience
+
+## Requirements
+
+You need [copier](https://copier.readthedocs.io/en/latest) with version `>=6.0.0a1` to create this project.
+This is a **hard** requirement as other versions will not work.
+It is recommended that you install the module with the following command.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AnHo4ng/statworx-python-ds-template/master/install_copier.sh)"
+```
 
 ## Quick setup and usage
 
-First make sure that [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
+First make sure that the correct version of [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
 
 ```bash
 copier "https://github.com/AnHo4ng/cookiecutter-data-science.git" /path/to/your/new/project
