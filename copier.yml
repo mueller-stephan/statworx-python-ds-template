@@ -6,6 +6,14 @@ _tasks:
   - sh scripts/post_generation.sh
 
 # PROMPT --------------------------------
+orchestrator:
+  type: str
+  help: Why project orchestrator do you want to use?
+  choices:
+    Kedro: "kedro"
+    Hydra: "hydra"
+    None: "none"
+
 project_name:
   type: str
   help: Your project name
@@ -44,12 +52,5 @@ use_direnv:
 
 use_jupyterlab:
   type: bool
-  help: Do you want to install jupter lab ?
+  help: Do you want to install jupter lab?
   default: yes
-
-orchestrator:
-  choices:
-    Kedro (default): kedro
-    Hydra: hydra
-    None: none
-  default: "kedro"
