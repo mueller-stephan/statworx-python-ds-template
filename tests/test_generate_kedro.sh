@@ -31,7 +31,10 @@ copier -f "${template}" "${output}" \
   -d python_version="3.8.9" \
   -d use_jupyterlab="yes" \
   -d use_direnv="yes" \
-  -d orchestrator="kedro"
+  -d orchestrator="kedro" \
+  -d client_name="Statworx" \
+  -d documentation="mkdocs"
+
 cd "${output}"
 
 echo
