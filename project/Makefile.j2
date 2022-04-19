@@ -81,7 +81,7 @@ install_dependencies: install_tools
 
 .PHONY: install_precommit
 install_precommit:
-	git init
+	git init -q
 	$(VENV)/pre-commit install
 
 .PHONY: install_tools
