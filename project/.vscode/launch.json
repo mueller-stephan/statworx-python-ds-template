@@ -33,7 +33,7 @@
             // e.g "args": ["run", "--pipeline", "pipeline_name"]
         },
         {
-            "name": "Step: Custom",
+            "name": "Step: User Defined Run",
             "type": "python",
             "request": "launch",
             "console": "internalConsole",
@@ -42,12 +42,10 @@
                 "run",
                 "--debug", // argument needed for custom hook
                 // "--from-nodes",
-                // "featurization_pipeline.make_tabular_dataset",
-                "--from-inputs",
-                "spiky_actuals",
+                // "starting_node",
+                // "--from-inputs",
+                // "starting_nput",
             ]
-            // Any other arguments should be passed as a comma-seperated-list
-            // e.g "args": ["run", "--pipeline", "pipeline_name"]
         }
     ]
 }
