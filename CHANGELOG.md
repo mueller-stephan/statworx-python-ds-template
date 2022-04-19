@@ -1,3 +1,11 @@
+## 0.7.0 (2022-04-19)
+
+
+- Merge branch 'dev'
+- [ORG:STYLE] Update README
+- [CI:FEAT] Add install script for copier
+- [OPS:FIX] Fix pyenv bug
+
 ## 0.6.0 (2022-04-19)
 
 
