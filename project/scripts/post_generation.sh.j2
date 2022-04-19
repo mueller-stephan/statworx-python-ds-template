@@ -2,3 +2,9 @@
 
 # install dependencies
 make install
+
+{% if git_repository %}
+# initilize git repo
+git init
+git remote add origin {{ git_repository }}
+{% endif %}
