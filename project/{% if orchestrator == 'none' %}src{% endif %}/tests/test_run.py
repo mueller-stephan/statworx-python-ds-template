@@ -1,0 +1,3 @@
+def test_dummy():
+    """Dummy test that has no effect."""
+    ...
