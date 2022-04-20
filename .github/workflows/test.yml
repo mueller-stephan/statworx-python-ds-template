@@ -1,16 +1,9 @@
 name: Test
 on:
-  push:
-    paths-ignore:
-      - docs/**
+  pull_request:
     branches:
       - master
-      - dev
-  pull_request:
-    paths-ignore:
-      - docs/**
-    branches:
-      - "**"
+      - main
 jobs:
   test:
     strategy:

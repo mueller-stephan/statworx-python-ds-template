@@ -33,6 +33,7 @@ copier -f "${template}" "${output}" \
   -d use_direnv="yes" \
   -d orchestrator="hydra" \
   -d client_name="Statworx" \
+  -d use_docker="no" \
   -d documentation="sphinx"
 cd "${output}"
 

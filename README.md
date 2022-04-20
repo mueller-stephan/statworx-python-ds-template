@@ -65,6 +65,8 @@ copier "gh:AnHo4ng/cookiecutter-data-science" /path/to/your/new/project
 ├── CHANGELOG.md
 │
 ├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
 │
 ├── Makefile
 │
@@ -89,6 +91,8 @@ copier "gh:AnHo4ng/cookiecutter-data-science" /path/to/your/new/project
 │   └── 08_reporting
 │
 ├── docs
+│   ├── logic
+│   └── model
 │
 ├── logs
 │

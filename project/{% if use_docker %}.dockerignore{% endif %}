@@ -1,0 +1,29 @@
+# Exclude everything
+*
+
+# Allow app folder
+!poetry.lock
+!pyproject.toml
+!src
+!conf
+!scripts
+!Makefile
+!data/01_raw/.gitkeep
+!data/02_intermediate/.gitkeepitkeep
+!data/03_primary/.gitkeep
+!data/04_feature/.gitkeep
+!data/05_model_input/.gitkeep
+!data/06_models/.gitkeep
+!data/07_model_output/.gitkeep
+!data/08_reporting/.gitkeep
+
+# ignore potentially sensitive credentials files
+conf/**/*credentials*
+
+# Exclude files again
+.DS_Store
+.AppleDouble
+.LSOverride
+__pycache__/
+*.py[cod]
+*$py.class
