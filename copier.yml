@@ -50,12 +50,12 @@ use_direnv:
 
 use_jupyterlab:
   type: bool
-  help: Do you want to install jupter lab?
+  help: Do you want to install jupyter lab?
   default: yes
 
 use_docker:
   type: bool
-  help: Do you want to initilize a docker file ?
+  help: Do you want to initialize a docker file ?
   default: yes
 
 orchestrator:
