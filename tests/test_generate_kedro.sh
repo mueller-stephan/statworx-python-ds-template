@@ -33,6 +33,7 @@ copier -f "${template}" "${output}" \
   -d use_direnv="yes" \
   -d orchestrator="kedro" \
   -d client_name="Statworx" \
+  -d use_docker="yes" \
   -d documentation="mkdocs"
 
 cd "${output}"

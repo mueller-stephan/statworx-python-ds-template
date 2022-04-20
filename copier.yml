@@ -53,6 +53,11 @@ use_jupyterlab:
   help: Do you want to install jupter lab?
   default: yes
 
+use_docker:
+  type: bool
+  help: Do you want to initilize a docker file ?
+  default: yes
+
 orchestrator:
   type: str
   help: Why project orchestrator do you want to use?
@@ -60,7 +65,6 @@ orchestrator:
     Kedro: "kedro"
     Hydra: "hydra"
     None: "none"
-  default: kedro
 
 documentation:
   type: str
@@ -68,4 +72,3 @@ documentation:
   choices:
     Mkdocs: "mkdocs"
     Sphinx: "sphinx"
-  default: mkdocs
