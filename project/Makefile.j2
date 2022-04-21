@@ -89,7 +89,7 @@ generate_api_documentation:
 
 .PHONY: install
 install: install_tools install_dependencies install_precommit {% if use_jupyterlab %}install_kernel{% endif %}
-	{% if use_direnv == true %}direnv allow{% endif %}
+	{% if use_direnv %}direnv allow{% endif %}
 
 .PHONY: install_dependencies
 install_dependencies: install_tools
