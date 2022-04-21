@@ -1,3 +1,12 @@
+## 0.10.0 (2022-04-21)
+
+
+- Merge pull request #5 from AnHo4ng/dev
+- Changes
+- [ORG:DOCS] Add contribution guide
+- [NBK:ICM] Add example notebook for kedro
+- [ORG:FIX] Fix bug in launch.json
+
 ## 0.9.3 (2022-04-21)
 
 
