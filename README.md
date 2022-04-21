@@ -5,6 +5,8 @@
 [![Documentation Status](https://readthedocs.org/projects/statworx-python-ds-template/badge/?version=latest)](https://statworx-python-ds-template.readthedocs.io/en/latest/?badge=latest)
 [![Python version](https://img.shields.io/badge/python-3.8-blue.svg)](https://pypi.org/project/kedro/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/blob/master/LICENCE)
+![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
+![Black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 [Copier](https://github.com/copier-org/copier) template for Data Science projects using [Kedro](https://kedro.readthedocs.io/en/stable/) with [Poetry](https://github.com/python-poetry/poetry) as dependency manager.
 This template is tied to version `0.18.x` of Kedro, as the API changes rapidly and newer versions could break the application.
@@ -39,13 +41,13 @@ It is recommended that you install the module with the following command.
 First make sure that the correct version of [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
 
 ```bash
-copier "https://github.com/AnHo4ng/cookiecutter-data-science.git" /path/to/your/new/project
+copier "https://github.com/AnHo4ng/statworx-python-ds-template" /path/to/your/new/project
 ```
 
 Or even shorter:
 
 ```bash
-copier "gh:AnHo4ng/cookiecutter-data-science" /path/to/your/new/project
+copier "gh:AnHo4ng/statworx-python-ds-template" /path/to/your/new/project
 ```
 
 ## Directory Structure
