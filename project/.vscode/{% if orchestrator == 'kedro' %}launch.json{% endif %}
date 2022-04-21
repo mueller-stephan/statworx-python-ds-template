@@ -27,7 +27,6 @@
             "console": "internalConsole",
             "args": [
                 "run",
-                "--debug" // argument needed for custom hook
             ]
             // Any other arguments should be passed as a comma-seperated-list
             // e.g "args": ["run", "--pipeline", "pipeline_name"]
@@ -40,7 +39,6 @@
             "module": "kedro",
             "args": [
                 "run",
-                "--debug", // argument needed for custom hook
                 // "--from-nodes",
                 // "starting_node",
                 // "--from-inputs",
