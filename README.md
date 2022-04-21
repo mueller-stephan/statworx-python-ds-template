@@ -41,7 +41,7 @@ It is recommended that you install the module with the following command.
 First make sure that the correct version of [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
 
 ```bash
-copier "https://github.com/AnHo4ng/statworx-python-ds-template" /path/to/your/new/project
+copier "https://github.com/AnHo4ng/statworx-python-ds-template.git" /path/to/your/new/project
 ```
 
 Or even shorter:
