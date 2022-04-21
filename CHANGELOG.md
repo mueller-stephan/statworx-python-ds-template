@@ -1,3 +1,10 @@
+## 0.9.2 (2022-04-21)
+
+
+- Merge pull request #3 from AnHo4ng/dev
+- [ORG:FIX] Fix Link in README
+- [ORG:FIX] Fix Link in README
+
 ## 0.9.1 (2022-04-21)
 
 
