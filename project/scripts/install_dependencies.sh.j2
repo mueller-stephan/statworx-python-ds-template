@@ -40,10 +40,17 @@ if ! command -v pyenv &>/dev/null; then
     source ${ZDOTDIR-~}/.zshrc
 fi
 
+# Install Pipx
+if ! command -v pipx &>/dev/null; then
+    echo "Install Poetry..."
+    brew install pipx
+    pipx ensurepath
+fi
+
 # Install Poetry
 if ! command -v poetry &>/dev/null; then
     echo "Install Poetry..."
-    brew install poetry
+    pipx install poetry
 fi
 
 # Install version '{{ python_version }}' of python using pyenv
