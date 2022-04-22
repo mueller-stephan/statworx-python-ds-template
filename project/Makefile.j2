@@ -95,6 +95,7 @@ install: install_tools install_dependencies install_precommit {% if use_jupyterl
 install_dependencies: install_tools
 	poetry config virtualenvs.in-project true
 	poetry env use $$(pyenv prefix {{ python_version }})/bin/python
+	$(VENV)/pip install --upgrade pip
 	poetry install
 
 .PHONY: install_precommit
