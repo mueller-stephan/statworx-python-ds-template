@@ -59,6 +59,14 @@ use_docker:
   help: Do you want to initialize a docker file ?
   default: yes
 
+ci:
+  type: str
+  help: Your choice of CI pipeline
+  choices:
+    None: "none"
+    Github: "github"
+  default: "none"
+
 orchestrator:
   type: str
   help: Why project orchestrator do you want to use?
