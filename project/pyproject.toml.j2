@@ -32,6 +32,7 @@ flake8 = ">=4.0.1"
 ipykernel = ">=6.9.2"
 ipython = ">=7.31.1"
 {%- if documentation == 'mkdocs' %}
+pygments = "2.11.2"             # HACK: upgrading this leads to a bug with mkdocstrings
 mkdocs = ">=1.3.0"
 mkdocs-material = ">=8.2.8"
 mkdocstrings = ">=0.18.1"
