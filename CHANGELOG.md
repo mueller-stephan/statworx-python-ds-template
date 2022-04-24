@@ -1,3 +1,9 @@
+## 0.11.1 (2022-04-24)
+
+
+- Merge branch 'dev' into origin/master
+- [ORG:FIX] Fix pyegments version
+
 ## 0.11.0 (2022-04-24)
 
 
