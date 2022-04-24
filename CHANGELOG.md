@@ -1,3 +1,11 @@
+## 0.12.1 (2022-04-24)
+
+
+- Merge pull request #8 from AnHo4ng/dev
+- Fix
+- [CI:FIX] Fix requirements for docs
+- [ORG:FIX] Fix readthedocs config
+
 ## 0.12.0 (2022-04-24)
 
 
