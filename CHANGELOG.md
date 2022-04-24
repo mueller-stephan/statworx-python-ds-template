@@ -1,3 +1,22 @@
+## 0.11.0 (2022-04-24)
+
+
+- Merge branch 'dev'
+- [CI:FIX] Fix CI bug
+- Merge pull request #6 from AnHo4ng/dev
+- Updates
+- [ORG:FIX] Delete intial changelog to fix bug
+- [CI:FIX] Fix error in cz config
+- [ORG:STYLE] Update statworx colors
+- [ORG:FEAT] Install poetry via pipx
+- [OPS:FIX] Update Pip before installation fo dependencies
+- [CI:ENH] Make ci optional
+- [ORG:FIX] Bad walkaround for pyenv bug
+- [ORG:DOCS] Add Placeholder of tool overview
+- [ORG:FIX] Fix Direnv Bug
+- [ORG:ENH] Make kedro and sphix default choices
+- [ORG:DOCS] Add code of conduct
+
 ## 0.10.0 (2022-04-21)
 
 
