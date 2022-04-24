@@ -89,12 +89,13 @@ generate_api_documentation:
 
 .PHONY: install
 install: install_tools install_dependencies install_precommit {% if use_jupyterlab %}install_kernel{% endif %}
-	{% if use_direnv == true %}direnv allow{% endif %}
+	{% if use_direnv %}direnv allow{% endif %}
 
 .PHONY: install_dependencies
 install_dependencies: install_tools
 	poetry config virtualenvs.in-project true
 	poetry env use $$(pyenv prefix {{ python_version }})/bin/python
+	$(VENV)/pip install --upgrade pip
 	poetry install
 
 .PHONY: install_precommit

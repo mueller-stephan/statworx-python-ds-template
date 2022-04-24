@@ -68,6 +68,8 @@ plugins:
 
 nav:
   - Overview: index.md
+  - Tool Overview: tool_overview.md
   - Contribution Guide: contribution.md
+  - Code of Conduct: code_of_conduct.md
   - Changelog: changelog.md
   - Licence: licence.md

@@ -6,6 +6,7 @@ _tasks:
   - sh scripts/post_generation.sh
 
 # PROMPT --------------------------------
+
 project_name:
   type: str
   help: Your project name
@@ -58,17 +59,27 @@ use_docker:
   help: Do you want to initialize a docker file ?
   default: yes
 
+ci:
+  type: str
+  help: Your choice of CI pipeline
+  choices:
+    None: "none"
+    Github: "github"
+  default: "none"
+
 orchestrator:
   type: str
   help: Why project orchestrator do you want to use?
   choices:
-    Kedro: "kedro"
+    Kedro (recommended): "kedro"
     Hydra: "hydra"
     None: "none"
+  default: kedro
 
 documentation:
   type: str
   help: Why documentation system do you want to use?
   choices:
+    Sphinx (recommended): "sphinx"
     Mkdocs: "mkdocs"
-    Sphinx: "sphinx"
+  default: sphinx
