@@ -52,7 +52,7 @@ copier "gh:AnHo4ng/statworx-python-ds-template" /path/to/your/new/project
 
 ## Directory Structure
 
-```
+```raw
 ├── .cz.toml
 │
 ├── .envrc
