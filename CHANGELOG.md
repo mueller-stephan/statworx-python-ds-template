@@ -1,3 +1,13 @@
+## 0.12.0 (2022-04-24)
+
+
+- Merge pull request #7 from AnHo4ng/dev
+- Update
+- [ORG:FIX] Fix pygments bug
+- [ORG:FIX] Remove Changelog
+- [ORG:STYLE] Fix README
+- [ORG:FEAT] Add statworx theme module
+
 ## 0.11.1 (2022-04-24)
 
 
