@@ -56,7 +56,7 @@ use_jupyterlab:
 
 use_docker:
   type: bool
-  help: Do you want to initialize a docker file ?
+  help: Do you want to initialize a docker file?
   default: yes
 
 ci:
@@ -69,7 +69,7 @@ ci:
 
 orchestrator:
   type: str
-  help: Why project orchestrator do you want to use?
+  help: Which project orchestrator do you want to use?
   choices:
     Kedro (recommended): "kedro"
     Hydra: "hydra"
@@ -78,7 +78,7 @@ orchestrator:
 
 documentation:
   type: str
-  help: Why documentation system do you want to use?
+  help: Which documentation tool do you want to use?
   choices:
     Sphinx (recommended): "sphinx"
     Mkdocs: "mkdocs"

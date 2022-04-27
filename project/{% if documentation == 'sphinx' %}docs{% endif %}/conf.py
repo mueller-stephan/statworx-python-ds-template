@@ -12,6 +12,7 @@
 #
 import os
 import sys
+from typing import List
 sys.path.append(os.path.abspath('../..'))
 sys.path.append(os.path.abspath('..'))
 
@@ -43,13 +44,13 @@ autodoc_inherit_docstrings = True  # If no docstring, inherit from base class
 add_module_names = False  # Remove namespaces from class/method signatures
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = []
+templates_path: List[str] = []
 
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns: List[str] = []
 
 
 # -- Options for HTML output -------------------------------------------------
