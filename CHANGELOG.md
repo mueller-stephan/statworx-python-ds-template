@@ -1,3 +1,69 @@
+## 0.12.1 (2022-04-24)
+
+
+- Merge pull request #8 from AnHo4ng/dev
+- Fix
+- [CI:FIX] Fix requirements for docs
+- [ORG:FIX] Fix readthedocs config
+
+## 0.12.0 (2022-04-24)
+
+
+- Merge pull request #7 from AnHo4ng/dev
+- Update
+- [ORG:FIX] Fix pygments bug
+- [ORG:FIX] Remove Changelog
+- [ORG:STYLE] Fix README
+- [ORG:FEAT] Add statworx theme module
+
+## 0.11.1 (2022-04-24)
+
+
+- Merge branch 'dev' into origin/master
+- [ORG:FIX] Fix pyegments version
+
+## 0.11.0 (2022-04-24)
+
+
+- Merge branch 'dev'
+- [CI:FIX] Fix CI bug
+- Merge pull request #6 from AnHo4ng/dev
+- Updates
+- [ORG:FIX] Delete intial changelog to fix bug
+- [CI:FIX] Fix error in cz config
+- [ORG:STYLE] Update statworx colors
+- [ORG:FEAT] Install poetry via pipx
+- [OPS:FIX] Update Pip before installation fo dependencies
+- [CI:ENH] Make ci optional
+- [ORG:FIX] Bad walkaround for pyenv bug
+- [ORG:DOCS] Add Placeholder of tool overview
+- [ORG:FIX] Fix Direnv Bug
+- [ORG:ENH] Make kedro and sphix default choices
+- [ORG:DOCS] Add code of conduct
+
+## 0.10.0 (2022-04-21)
+
+
+- Merge pull request #5 from AnHo4ng/dev
+- Changes
+- [ORG:DOCS] Add contribution guide
+- [NBK:ICM] Add example notebook for kedro
+- [ORG:FIX] Fix bug in launch.json
+
+## 0.9.3 (2022-04-21)
+
+
+- Merge pull request #4 from AnHo4ng/dev
+- [PPL:FIX] FIx cc bug
+- [PPL:FIX] FIx cc bug
+
+## 0.9.2 (2022-04-21)
+
+
+- Merge pull request #3 from AnHo4ng/dev
+- [ORG:FIX] Fix Link in README
+- [ORG:FIX] Fix Link in README
+
 ## 0.9.1 (2022-04-21)
 
 
