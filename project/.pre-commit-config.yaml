@@ -12,11 +12,6 @@ repos:
   - id: requirements-txt-fixer
   - id: trailing-whitespace
 
-- repo: https://github.com/hakancelik96/unimport
-  rev: 0.9.5
-  hooks:
-  - id: unimport
-
 - repo: https://github.com/commitizen-tools/commitizen
   rev: v2.23.0
   hooks:
@@ -86,12 +81,6 @@ repos:
   - id: nbqa-check-ast
     additional_dependencies: [pre-commit-hooks]
     args: [--nbqa-mutate]
-
-- repo: https://github.com/commitizen-tools/commitizen
-  rev: v2.23.0
-  hooks:
-  - id: commitizen
-    stages: [commit-msg]
 
 - repo: https://github.com/hakancelik96/unimport
   rev: 0.9.5
