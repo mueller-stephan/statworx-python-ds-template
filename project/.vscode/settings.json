@@ -1,15 +1,19 @@
 {
+    // kedro yml schema
     "yaml.schemas": {
         "https://raw.githubusercontent.com/kedro-org/kedro/develop/static/jsonschema/kedro-catalog-0.17.json": "conf/**/*catalog*"
     },
+    // git settings
     "git.ignoreLimitWarning": true,
+    // todo-tree
     "todo-tree.filtering.excludeGlobs": [
         "docs",
         ".venv",
     ],
-    "python.pythonPath": "${workspaceFolder}/.venv/bin/python3",
+    // autodocstring
     "autoDocstring.docstringFormat": "google",
     "autoDocstring.customTemplatePath": "${workspaceFolder}/.vscode/docstring.template",
+    // editor settings
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -19,30 +23,10 @@
     "editor.rulers": [
         100
     ],
+    // python settings
+    "python.pythonPath": "${workspaceFolder}/.venv/bin/python3",
     "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
-    "python.sortImports.args": [
-        "--line-length=100",
-        "--profile=black",
-        "--atomic"
-    ],
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=100",
-        "--docstring-convention=google"
-    ],
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length=100"
-    ],
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": [
-        "--ignore-missing-imports",
-        "--follow-imports=silent",
-        "--disallow-untyped-defs",
-        "--disallow-incomplete-defs",
-        "--disallow-untyped-calls",
-        "--warn-unused-ignores",
-        "--show-column-numbers",
-        "--show-error-codes"
-    ],
 }
