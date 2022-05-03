@@ -12,18 +12,19 @@
 #
 import os
 import sys
-sys.path.append(os.path.abspath('../..'))
-sys.path.append(os.path.abspath('..'))
+
+sys.path.append(os.path.abspath("../.."))
+sys.path.append(os.path.abspath(".."))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentation Template'
-copyright = '2022, statworx'
-author = 'statworx'
+project = "Documentation Template"
+copyright = "2022, statworx"
+author = "statworx"
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = "0.1"
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,11 +33,11 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',  # Core Sphinx library for auto html doc generation from docstrings
-    'sphinx.ext.viewcode',  # Add a link to the Python source code for classes, functions etc.
-    'sphinx.ext.napoleon',
-    'myst_parser',
-    'matplotlib.sphinxext.plot_directive',  # include plots
+    "sphinx.ext.autodoc",  # Core Sphinx library for auto html doc generation from docstrings
+    "sphinx.ext.viewcode",  # Add a link to the Python source code for classes, functions etc.
+    "sphinx.ext.napoleon",
+    "myst_parser",
+    "matplotlib.sphinxext.plot_directive",  # include plots
 ]
 
 autodoc_inherit_docstrings = True  # If no docstring, inherit from base class
@@ -57,7 +58,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme = 'furo'
+html_theme = "furo"
 
 html_theme_options = {
     "light_logo": "statworx-Logo-White.png",
@@ -66,7 +67,6 @@ html_theme_options = {
         "color-brand-primary": "white",
         "color-brand-content": "#283440",
         "color-content-foreground": "black",
-
         "color-sidebar-caption-text": "white",
         "color-sidebar-background": "black",
         "color-sidebar-search-foreground": "white",
@@ -74,10 +74,8 @@ html_theme_options = {
         "color-sidebar-search-border": "#303335",
         "color-background-hover": "#1c1c1c",
         "color-toc-item-text--active": "black",
-
         "color-admonition-title-background--note": "rgba(0,0,255,.1)",
         "color-admonition-title--note": "#0000FF",
-
         "color-api-keyword": "black",
         "color-api-pre-name": "#FE0D6C",
         "color-api-name": "#FE0D6C",
@@ -88,18 +86,15 @@ html_theme_options = {
         "color-brand-primary": "white",
         "color-brand-content": "white",
         "color-content-foreground": "white",
-
         "color-sidebar-caption-text": "white",
         "color-sidebar-background": "black",
         "color-sidebar-search-foreground": "white",
         "color-sidebar-link-text": "#EBF0F2",
         "color-background-hover": "#1c1c1c",
         "color-toc-item-text--active": "white",
-
         "color-admonition-background": "#1c1c1c",
         "color-admonition-title-background--note": "rgba(68,127,207,.1)",
         "color-admonition-title--note": "rgb(68,127,207)",
-
         "color-api-keyword": "white",
         "color-api-pre-name": "#FE0D6C",
         "color-api-name": "#FE0D6C",
@@ -124,52 +119,49 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 html_css_files = [
-    'custom.css',
+    "custom.css",
 ]
 
 
 # -- Options for Latex output -------------------------------------------------
 
-latex_engine = 'xelatex'
+latex_engine = "xelatex"
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    ('index', 'main.tex', project, author, 'report')
-]
+latex_documents = [("index", "main.tex", project, author, "report")]
 
-latex_maketitle = r'''
+latex_maketitle = r"""
 \begin{figure}[t!]
     \centering
     \includepdf[scale=1.1]{../../_static/landing_page.pdf}
 \end{figure}
-'''
+"""
 
-latex_toc = r'''
+latex_toc = r"""
 {
   \hypersetup{linkcolor=black}
   \tableofcontents
 }
-'''
+"""
 
-latex_printindex = r'''
+latex_printindex = r"""
 \printindex
 
 \begin{figure}[t!]
     \centering
     \includepdf[scale=1.1]{../../_static/last_page.pdf}
 \end{figure}
-'''
+"""
 
 latex_elements = {
-    'sphinxsetup': 'TitleColor={RGB}{0,0,255}',
-    'preamble':  r'\usepackage{pdfpages} \usepackage{fontspec} \setmainfont{Arial} \usepackage{titlesec} \titleformat{\chapter}[hang] {\normalfont\LARGE\bfseries\color{blue}}{\thechapter.}{0.4em}{} ',
-    'maketitle': latex_maketitle,
-    'tableofcontents': latex_toc,
-    'fncychap': '',
-    'printindex': latex_printindex,
+    "sphinxsetup": "TitleColor={RGB}{0,0,255}",
+    "preamble": r"\usepackage{pdfpages} \usepackage{fontspec} \setmainfont{Arial} \usepackage{titlesec} \titleformat{\chapter}[hang] {\normalfont\LARGE\bfseries\color{blue}}{\thechapter.}{0.4em}{} ",
+    "maketitle": latex_maketitle,
+    "tableofcontents": latex_toc,
+    "fncychap": "",
+    "printindex": latex_printindex,
 }
-
