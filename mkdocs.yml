@@ -71,8 +71,10 @@ plugins:
 nav:
   - Overview: index.md
   - User Guide:
+      - Style Guide: style_guide.md
       - Dev Tools: dev_tools.md
       - Code Tools: code_tools.md
+      - Test Guide: testing.md
       - IDE Integration: ide_integration.md
   - Contribution Guide: contribution.md
   - Code of Conduct: code_of_conduct.md
