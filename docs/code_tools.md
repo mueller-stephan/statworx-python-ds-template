@@ -11,7 +11,6 @@ The tools installed on this project are:
 * `flake8` - A code linter
 * `unimport` - A tool that removes unused imported modules
 * `isort` - A tool that sorts the import statements
-* `darglint` - A linter for docstrings.
 
 All of these tools are registered in the pre-commit hook and are executed before a commit is made in Git.
 If any of them fail or an error is detected, the commit fails.
