@@ -1,3 +1,28 @@
+## 0.14.0 (2022-05-05)
+
+
+- Merge pull request #11 from AnHo4ng/dev
+- Update Documentation
+- [ORG:DOCS] Update documentation for dev tools
+- [ORG:ENH] Update mkdocs config
+- [OPS:DOCS] Add coding style guide
+- [ORG:DOCS] Rework ide integration guide for vscode
+- [OPS:DOCS] Update code tools overview
+- [OPS:DOCS] Update dev guide
+- [ORG:DOCS] Add testing guide
+- Merge remote-tracking branch 'refs/remotes/origin/master'
+- Conflicts:
+	project/{% if documentation == 'sphinx' %}docs{% endif %}/conf.py
+- [ORG:STYLE] Format code
+- [ORG:ENH] Define docstring style
+- [ORG:ENH] Clean up vscode configuration files
+- [ORG:STYLE] Change markdown code tag from console to bash
+- [ORG:REF] Add '/' as a search shortcut
+- [ORG:DOCS] Add Guide for settings up vscode
+- [ORG:DOCS] Add overview of used code tools
+- [ORG:DOCS] Add Overview of used dev tools
+- [ORG:ENH] Add pep-naming
+
 ## 0.13.0 (2022-04-29)
 
 
