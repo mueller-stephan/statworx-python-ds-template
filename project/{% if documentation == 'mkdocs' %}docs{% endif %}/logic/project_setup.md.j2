@@ -4,13 +4,13 @@
 
 In this project we use the python version `3.8.9`. It is recommendet to use Pyenv to install the required Python version as it minimizes conflicts with the system python executable. You can install it using the autoinstaller with the following line.
 
-```console
+```bash
 curl https://pyenv.run | bash
 ```
 
 After that you need to install the required python verison `3.8.9`. To do that run:
 
-```console
+```bash
 pyenv install 3.8.9
 ```
 
@@ -20,19 +20,19 @@ This command will take a while. After that you should have the binary `python3.8
 
 Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. To install it run:
 
-```console
+```bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
 And to force Poetry to install the virtual environment in the project folder, run:
 
-```console
+```bash
 poetry config virtualenvs.in-project true
 ```
 
 To install all dependencies and the project itself,
 navigate into the folder with the file `poetry.lock`, and execute:
 
-```console
+```bash
 poetry install
 ```

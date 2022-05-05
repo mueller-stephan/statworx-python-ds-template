@@ -23,7 +23,7 @@
 
 The dependencies are managed using `poetry`.
 
-```console
+```bash
 make install
 ```
 
@@ -33,7 +33,7 @@ make install
 
 You can run the entire end-to-end pipeline that processes the data, trains the model, and makes predictions using one of the two following commands. The `run_local` target runs the local pipeline with local data in the `data` folder. The `run_prod` target loads the data from snowflake and stores the predictions back into snowflake.
 
-```console
+```bash
 make run_local  # local pipeline
 make run_prod  # production pipeline
 ```
@@ -42,7 +42,7 @@ make run_prod  # production pipeline
 
 The model training is tracked with mlflow. The dashboard can be started by running the following command. After that it can be accessed on `http://localhost:5001`.
 
-```console
+```bash
 make mlfow
 ```
 
@@ -50,7 +50,7 @@ make mlfow
 
 Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
 
-```console
+```bash
 make test
 ```
 
@@ -60,7 +60,7 @@ Kedro provides a user interface called `kedro-viz` that visualizes the implement
 The dashboard can be started by running the following command. After that it can be accessed on `http://localhost:4141`.
 
 
-```console
+```bash
 make viz
 ```
 
@@ -68,6 +68,6 @@ make viz
 
 Your can build the documentation using `mkdocs` with the following command. The documentation can then be accessed with the browser under `http://localhost:8000`.
 
-```console
+```bash
 make documentation
 ```

@@ -24,6 +24,7 @@ theme:
 
 extra_css:
   - assets/css/extras.css
+  - assets/css/shortcut.css
   - assets/css/style.css
   - assets/css/mkdocstrings.css
 
@@ -60,6 +61,7 @@ markdown_extensions:
   - pymdownx.tasklist
 
 extra_javascript:
+  - assets/javascripts/shortcuts.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -68,7 +70,12 @@ plugins:
 
 nav:
   - Overview: index.md
-  - Tool Overview: tool_overview.md
+  - User Guide:
+      - Style Guide: style_guide.md
+      - Dev Tools: dev_tools.md
+      - Code Tools: code_tools.md
+      - Test Guide: testing.md
+      - IDE Integration: ide_integration.md
   - Contribution Guide: contribution.md
   - Code of Conduct: code_of_conduct.md
   - Changelog: changelog.md
