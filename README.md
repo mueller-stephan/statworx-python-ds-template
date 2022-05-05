@@ -2,7 +2,7 @@
 
 [![Release](https://github.com/STATWORX/statworx-python-ds-template/workflows/Release%20Pipeline/badge.svg)](https://github.com/STATWORX/statworx-python-ds-template/actions/workflows/release.yml)
 [![Test](https://github.com/STATWORX/statworx-python-ds-template/workflows/Test/badge.svg)](https://github.com/STATWORX/statworx-python-ds-template/actions/workflows/test.yml)
-[![Documentation Status](https://readthedocs.org/projects/statworx-python-ds-template/badge/?version=latest)](https://statworx-python-ds-template.readthedocs.io/en/latest/?badge=latest)
+<!-- [![Documentation Status](https://readthedocs.org/projects/statworx-python-ds-template/badge/?version=latest)](https://statworx-python-ds-template.readthedocs.io/en/latest/?badge=latest) -->
 [![Python version](https://img.shields.io/badge/python-3.8-blue.svg)](https://pypi.org/project/kedro/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/STATWORX/statworx-python-ds-template/blob/master/LICENCE)
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
@@ -10,7 +10,7 @@
 
 [Copier](https://github.com/copier-org/copier) template for Data Science projects using [Kedro](https://kedro.readthedocs.io/en/stable/) with [Poetry](https://github.com/python-poetry/poetry) as dependency manager.
 This template is tied to version `0.18.x` of Kedro, as the API changes rapidly and newer versions could break the application.
-Documentation for this template can be found at [readthedocs](https://statworx-python-ds-template.readthedocs.io/en/latest/).
+<!-- Documentation for this template can be found at [readthedocs](https://statworx-python-ds-template.readthedocs.io/en/latest/). -->
 
 ## Features
 
