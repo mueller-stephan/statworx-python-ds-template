@@ -1,3 +1,30 @@
+## 0.13.0 (2022-04-29)
+
+
+- Merge pull request #9 from mueller-stephan/master
+- Minor Fixes and Adaptions
+- Merge pull request #1 from mueller-stephan/dev
+- Dev
+- [CI:FIX] Readd code_quality workflow
+- Merge branch 'master' into dev
+- # Conflicts:
+#	.github/workflows/release.yml
+#	.github/workflows/test.yml
+#	project/notebooks/{% if orchestrator == 'kedro' %}Example Kedro.ipynb{% endif %}
+#	project/{% if ci == 'github' %}.github{% endif %}/workflows/conde_quality.yml
+#	project/{% if ci == 'github' %}.github{% endif %}/workflows/release.yml
+#	project/{% if ci == 'github' %}.github{% endif %}/workflows/test.yml
+#	project/{% if ci == 'github' %}.github{% endif %}/workflows/{% if documentation == 'mkdocs' %}docspublish.yaml{% endif %}
+- [ORG:STYLE] Remove files conflicting with master merge
+- [ORG:STYLE] Remove Pycharm config files.
+- [CI:STYLE] Refactor copier initialization file.
+- [ORG:FIX] Add conditional statement for mkdocs configuration file.
+- [ORG:FIX] Add missing import for documentation.
+- [PPL:ENH] Add type hints and reformat docstrings for pipeline.
+- [CI:DEL] Remove duplicates of unimport and commitizen in pre-commit specification.
+- [CI:STYLE] Fix typo for code quality workflow.
+- [CI:ENH] Update mypy settings according to Python styleguide.
+
 ## 0.12.1 (2022-04-24)
 
 
