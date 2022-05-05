@@ -63,9 +63,8 @@ The configurations are saved in `setup.cfg`
 
 ## Flake8 (with Darglint and Pep8-Naming)
 
-<!-- TODO: Add link to statworx style guide -->
 Flake8 is a linter that enforces the rules of the style guide, e.g. that all lines must be shorter than 100 characters.
-It is configured to follow the statworx style guide described [here](https://www.google.com).
+It is configured to follow the statworx style guide described [here](./style_guide.md).
 In addition two plugins are installed. `Darglint` check if the docstring for all functions is formatter correctly and `pep8-naming` checks variables have pep8 compliant names.
 It can be run from the command line with:
 

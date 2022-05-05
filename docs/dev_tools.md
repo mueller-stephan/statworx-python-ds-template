@@ -1,5 +1,16 @@
 # Dev Tools
 
+Dev tools are tools that makes our live as developer easier because they automate some boring task.
+The tools that are used in this project are:
+
+* `poetry` - Dependency manager
+* `commitzen` - Commit message generator
+* `direnv` - Terminal environment manager
+* `docker` - Virtual machine
+* `pyenv` - Python installer and version manager
+* `pipx` - Python tool installer
+* `brew` - OSX package manager
+
 ## Poetry
 
 Poetry is a dependency management and packaging tool in Python.
@@ -174,4 +185,68 @@ For that run:
 ```bash
 docker-compose build
 docker-compose up
+```
+
+## Pyenv
+
+With [Pyenv](https://github.com/pyenv/pyenv) you can easily switch between multiple Python versions and install the right version for your project.
+
+### Installation
+
+### Usage
+
+To install a specific Python version for your project, simply run
+
+```bash
+pyenv install <python-version>
+```
+
+To make a Python version the global Python version, execute
+
+```bash
+pyenv global <python-version>
+```
+
+And to make it the local Python version using only a specific project folder, run the following command in that folder.
+It will create a file `.python-version` indicating this version.
+
+```bash
+pyenv local <python-version>
+```
+
+## Pipx
+
+[Pipx](https://pypa.github.io/pipx/) is a tool that helps you install and run end-user applications written in Python, such as `black` or `flake8`.
+These are Python modules that are normally not imported from code, but used in the command line.
+Pipx creates an isolated environment for each application and its associated packages.
+This is important because installing tools in a shared environment with all our other dependencies can lead to dependency conflicts.
+
+### Installation
+
+The Pipx application can be easily installed with Homebrew. After that, you need to add the location of the executables to your path.
+You can do this easily by executing the following two lines in the shell.
+
+```bash
+brew install pipx
+pipx ensurepath
+```
+
+### Usage
+
+To install a tool simply run
+
+```bash
+pipx install flake8
+```
+
+!!! note
+    The executables of the installed modules are exposed at `.local/bin` which is added to your `$PATH` if you installed the package correctly. If this is not the case you can manually add it in your `.zprofile` or `.zshrc`.
+
+## Homebrew
+
+[Homebrew](https://brew.sh/) is the (unofficial) official package manager for OSX.
+With it, you can install virtually any application, whether it's a GUI application like `Google Chrome` or an abstruse terminal application like `cowsay`. To install a package simply run:
+
+```bash
+brew install <package-name>
 ```
