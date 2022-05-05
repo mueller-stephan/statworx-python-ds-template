@@ -41,7 +41,7 @@ git_repository:
 
 python_version:
   type: str
-  help: Your python version for the project (only 3.8.x is allow because of kedro)
+  help: Your python version for the project (>=3.7, <3.11 is required because of kedro)
   default: "3.8.9"
 
 use_direnv:
@@ -66,6 +66,11 @@ ci:
     None: "none"
     Github: "github"
   default: "none"
+
+test_windows:
+  type: bool
+  help: Should the python setup and packaging be tested on a windows machine as well? (only necessary if client uses windows)
+  default: no
 
 orchestrator:
   type: str

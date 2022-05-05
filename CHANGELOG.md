@@ -1,3 +1,13 @@
+## 0.15.0 (2022-05-05)
+
+
+- Merge pull request #10 from mueller-stephan/master
+- Minor fixes and add report template
+- Merge branch 'AnHo4ng:master' into master
+- [ORG:ICM] Add statworx report template.
+- [DEP:REF] Reduce restrictions on Python version due to kedro update
+- [CI:ENH] Only test windows if necessary.
+
 ## 0.14.0 (2022-05-05)
 
 
