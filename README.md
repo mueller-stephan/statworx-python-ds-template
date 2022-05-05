@@ -1,10 +1,10 @@
 # Statworx Python Template
 
-[![Release](https://github.com/AnHo4ng/statworx-python-ds-template/workflows/Release%20Pipeline/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/release.yml)
-[![Test](https://github.com/AnHo4ng/statworx-python-ds-template/workflows/Test/badge.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/actions/workflows/test.yml)
+[![Release](https://github.com/STATWORX/statworx-python-ds-template/workflows/Release%20Pipeline/badge.svg)](https://github.com/STATWORX/statworx-python-ds-template/actions/workflows/release.yml)
+[![Test](https://github.com/STATWORX/statworx-python-ds-template/workflows/Test/badge.svg)](https://github.com/STATWORX/statworx-python-ds-template/actions/workflows/test.yml)
 [![Documentation Status](https://readthedocs.org/projects/statworx-python-ds-template/badge/?version=latest)](https://statworx-python-ds-template.readthedocs.io/en/latest/?badge=latest)
 [![Python version](https://img.shields.io/badge/python-3.8-blue.svg)](https://pypi.org/project/kedro/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AnHo4ng/statworx-python-ds-template/blob/master/LICENCE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/STATWORX/statworx-python-ds-template/blob/master/LICENCE)
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
 ![Black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
@@ -33,7 +33,7 @@ This is a **hard** requirement as other versions will not work.
 It is recommended that you install the module with the following command.
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AnHo4ng/statworx-python-ds-template/master/install_copier.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/STATWORX/statworx-python-ds-template/master/install_copier.sh)"
 ```
 
 ## Quick setup and usage
@@ -41,13 +41,13 @@ It is recommended that you install the module with the following command.
 First make sure that the correct version of [copier](https://copier.readthedocs.io/en/latest) is installed on your system. Then run:
 
 ```bash
-copier "https://github.com/AnHo4ng/statworx-python-ds-template.git" /path/to/your/new/project
+copier "https://github.com/STATWORX/statworx-python-ds-template.git" /path/to/your/new/project
 ```
 
 Or even shorter:
 
 ```bash
-copier "gh:AnHo4ng/statworx-python-ds-template" /path/to/your/new/project
+copier "gh:STATWORX/statworx-python-ds-template" /path/to/your/new/project
 ```
 
 ## Directory Structure

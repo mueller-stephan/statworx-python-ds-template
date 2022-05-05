@@ -8,7 +8,7 @@ Since this version is still in beta, you must explicitly specify the version whe
 There is an installation script for the installation process that you can run with:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AnHo4ng/statworx-python-ds-template/master/install_copier.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/STATWORX/statworx-python-ds-template/master/install_copier.sh)"
 ```
 
 To create the documentation you need `mkdocs` and `mkdocs-material`.
