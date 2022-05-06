@@ -71,9 +71,13 @@ plugins:
 nav:
   - Overview: index.md
   - User Guide:
+      - Project Initialisation Guide: initialisation_guide.md
+      - Project Settings: project_settings.md
       - Style Guide: style_guide.md
       - Dev Tools: dev_tools.md
       - Code Tools: code_tools.md
+      - Pre-commit Hooks: precommit_hooks.md
+      - Kedro Introduction: kedro.md
       - Test Guide: testing.md
       - IDE Integration: ide_integration.md
   - Contribution Guide: contribution.md
